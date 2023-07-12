@@ -6,9 +6,18 @@
   .sidebar-icon {
     @apply relative flex items-center justify-center 
            w-10 h-10 p-1
-           bg-gray-800 text-blue-400
-           hover:text-white hover:bg-blue-600 
+           dark:bg-gray-800 dark:text-blue-400
+           dark:hover:bg-blue-600 dark:hover:text-white 
+           bg-gray-300 text-blue-600
+           hover:bg-blue-300 hover:text-blue-600
            rounded-3xl hover:rounded-xl
            transition-all duration-300 ease-linear;
+  }
+
+  .icon {
+    @apply dark:bg-transparent dark:text-blue-400 
+           dark:hover:text-pink-400
+           bg-transparent text-blue-600 
+           hover:text-pink-400;
   }
 }

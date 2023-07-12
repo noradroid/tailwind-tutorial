@@ -1,10 +1,14 @@
-<div class="h-full w-full flex flex-col items-center">
+<div
+  class="h-full w-full flex flex-col items-center dark:bg-gray-800 bg-gray-200"
+  *ngIf="mode$ | async as mode"
+>
   <div class="m-4 leading-normal">
-    <span class="text-gray-100"
+    <span class="dark:text-gray-100 text-gray-900"
       >Click this button to enable {{ mode }} mode:
     </span>
     <button
-      class="inline-flex justify-center items-center w-10 h-10 bg-gray-900 text-blue-400 rounded-full align-middle hover:bg-gray-100 hover:text-blue-600 transition-all duration-300 ease-linear"
+      class="icon inline-flex justify-center items-center w-10 h-10 rounded-full align-middle transition-all duration-300 ease-linear"
+      (click)="switchMode(mode)"
     >
       <span class="material-symbols-outlined">{{ mode }}_mode</span>
     </button>
